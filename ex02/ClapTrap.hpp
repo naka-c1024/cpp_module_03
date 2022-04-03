@@ -7,7 +7,7 @@ class ClapTrap
 {
 public:
 	ClapTrap();
-	~ClapTrap();
+	virtual ~ClapTrap();
 	ClapTrap(ClapTrap const &other);
 	ClapTrap &operator=(ClapTrap const &other);
 
