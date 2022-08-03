@@ -49,7 +49,10 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		return;
 	}
 	std::cout << "ClapTrap " << this->_name << " took " << amount << " points of damage!" << std::endl;
-	this->_hit_points -= amount;
+	if (this->_hit_points > amount)
+		this->_hit_points -= amount;
+	else
+		this->_hit_points = 0;
 }
 void	ClapTrap::beRepaired(unsigned int amount)
 {
