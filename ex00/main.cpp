@@ -1,5 +1,7 @@
 #include "ClapTrap.hpp"
 
+// claptrap->ハッタリ->_attack_damageが0
+
 int	main(void)
 {
 	ClapTrap a;
@@ -13,7 +15,7 @@ int	main(void)
 
 	b.attack("jirou");
 	b.beRepaired(100);
-	b.takeDamage(110);
+	b.takeDamage(120);
 	b.beRepaired(100);
 
 	for (size_t i = 0; i < 10; i++)
