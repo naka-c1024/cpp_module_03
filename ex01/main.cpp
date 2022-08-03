@@ -11,23 +11,20 @@ int main(void)
 
 	a.attack("hanako");
 	a.beRepaired(20);
-	a.takeDamage(30);
 	a.attack("tarou");
-	a.guardGate();
+	a.takeDamage(1000);
+	a.attack("hito");
 	std::cout << std::endl;
 
 	b.attack("jirou");
-	b.beRepaired(100);
-	b.takeDamage(110);
-	b.beRepaired(100);
+	b.takeDamage(99);
+	b.beRepaired(99);
 	b.guardGate();
 	std::cout << std::endl;
 
-	c.attack("abc");
-	c.beRepaired(100);
-	c.takeDamage(110);
-	c.beRepaired(100);
-	c.guardGate();
+	for (size_t i = 0; i < 50; i++)
+		c.attack("hehe");
+	c.attack("hehe");
 	std::cout << std::endl;
 
 	return 0;
