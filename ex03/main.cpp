@@ -8,6 +8,11 @@ int main(void)
 	DiamondTrap c(b);
 	std::cout << std::endl;
 
+	a.print_info();
+	b.print_info();
+	c.print_info();
+	std::cout << std::endl;
+
 	a.attack("hanako");
 	a.beRepaired(20);
 	a.takeDamage(30);

@@ -15,6 +15,10 @@ public:
 
 	void attack(const std::string& target);
 	void guardGate();
+protected:
+	static const unsigned int	_ST_hit_points = 100;
+	static const unsigned int	_ST_energy_points = 50;
+	static const unsigned int	_ST_attack_damage = 20;
 };
 
 #endif /* SCAVTRAP_HPP */

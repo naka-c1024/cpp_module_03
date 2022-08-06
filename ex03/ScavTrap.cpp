@@ -43,10 +43,13 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "ScavTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "ScavTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
-	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " attacks " << target
+		<< ", causing " << this->_attack_damage << " points of damage!" << std::endl;
 	(this->_energy_points--);
 }
 
@@ -54,7 +57,9 @@ void ScavTrap::guardGate(void)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "ScavTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "ScavTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
 	std::cout << "ScavTrap" << this->_name << "is now in Gate keeper mode." << std::endl;

@@ -14,6 +14,10 @@ public:
 	FragTrap(std::string name);
 
 	void highFivesGuys(void);
+protected:
+	static const unsigned int	_FT_hit_points = 100;
+	static const unsigned int	_FT_energy_points = 100;
+	static const unsigned int	_FT_attack_damage = 30;
 };
 
 #endif /* FRAGTRAP_HPP */
