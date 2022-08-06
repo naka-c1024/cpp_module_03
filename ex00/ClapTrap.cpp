@@ -36,20 +36,26 @@ void	ClapTrap::attack(const std::string& target)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "ClapTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
-	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " attacks " << target
+		<< ", causing " << this->_attack_damage << " points of damage!" << std::endl;
 	(this->_energy_points--);
 }
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "ClapTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
-	std::cout << "ClapTrap " << this->_name << " took " << amount << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " took "
+		<< amount << " points of damage!" << std::endl;
 	if (this->_hit_points > amount)
 		this->_hit_points -= amount;
 	else
@@ -59,10 +65,13 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "ClapTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
-	std::cout << "ClapTrap " << this->_name << " repairs itself, it gets " << amount << " hit points back" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " repairs itself, it gets "
+		<< amount << " hit points back" << std::endl;
 	this->_hit_points += amount;
 	(this->_energy_points--);
 }

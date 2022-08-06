@@ -3,10 +3,10 @@
 
 FragTrap::FragTrap()
 {
-	_name = "unknown";
-	_hit_points = 100;
-	_energy_points = 100;
-	_attack_damage = 30;
+	this->_name = "unknown";
+	this->_hit_points = 100;
+	this->_energy_points = 100;
+	this->_attack_damage = 30;
 	std::cout << "FragTrap: Default constructor called" << std::endl;
 }
 FragTrap::~FragTrap()
@@ -32,10 +32,10 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
 
 FragTrap::FragTrap(std::string name)
 {
-	_name = name;
-	_hit_points = 100;
-	_energy_points = 50;
-	_attack_damage = 20;
+	this->_name = name;
+	this->_hit_points = 100;
+	this->_energy_points = 100;
+	this->_attack_damage = 30;
 	std::cout << "FragTrap: string constructor called" << std::endl;
 }
 
@@ -43,8 +43,11 @@ void	FragTrap::highFivesGuys(void)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "FragTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "FragTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
-	std::cout << "FragTrap " << this->_name << " requests a positive high fives" << std::endl;
+	std::cout << "FragTrap " << this->_name
+		<< " requests a positive high fives" << std::endl;
 }

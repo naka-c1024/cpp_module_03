@@ -3,10 +3,10 @@
 
 ScavTrap::ScavTrap()
 {
-	_name = "unknown";
-	_hit_points = 100;
-	_energy_points = 50;
-	_attack_damage = 20;
+	this->_name = "unknown";
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 	std::cout << "ScavTrap: Default constructor called" << std::endl;
 }
 ScavTrap::~ScavTrap()
@@ -32,10 +32,10 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
 ScavTrap::ScavTrap(std::string name)
 {
-	_name = name;
-	_hit_points = 100;
-	_energy_points = 50;
-	_attack_damage = 20;
+	this->_name = name;
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 	std::cout << "ScavTrap: string constructor called" << std::endl;
 }
 

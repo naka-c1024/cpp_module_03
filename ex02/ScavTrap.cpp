@@ -3,10 +3,10 @@
 
 ScavTrap::ScavTrap()
 {
-	_name = "unknown";
-	_hit_points = 100;
-	_energy_points = 50;
-	_attack_damage = 20;
+	this->_name = "unknown";
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 	std::cout << "ScavTrap: Default constructor called" << std::endl;
 }
 ScavTrap::~ScavTrap()
@@ -32,10 +32,10 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 
 ScavTrap::ScavTrap(std::string name)
 {
-	_name = name;
-	_hit_points = 100;
-	_energy_points = 50;
-	_attack_damage = 20;
+	this->_name = name;
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 	std::cout << "ScavTrap: string constructor called" << std::endl;
 }
 
@@ -43,10 +43,13 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "ScavTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "ScavTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
-	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " attacks " << target
+		<< ", causing " << this->_attack_damage << " points of damage!" << std::endl;
 	(this->_energy_points--);
 }
 
@@ -54,7 +57,9 @@ void ScavTrap::guardGate(void)
 {
 	if (this->_hit_points == 0 || this->_energy_points == 0)
 	{
-		std::cout << "ScavTrap " << this->_name << " can't do anything because it has no hit points or energy points left." << std::endl;
+		std::cout << "ScavTrap " << this->_name
+			<< " can't do anything because it has no hit points or energy points left."
+			<< std::endl;
 		return;
 	}
 	std::cout << "ScavTrap" << this->_name << "is now in Gate keeper mode." << std::endl;
